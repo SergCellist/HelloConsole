@@ -2,24 +2,24 @@
 //Console.SetCursorPosition(10, 4); // комманда которая будет "рисовать" в качестве аргументов (отступ от левого края, отступ от верхнего края). Строки и символы тут нумеруются с 0.
 //Console.WriteLine("+");
 
-int xa = 40;
-int ya = 1;
-int xb = 1;
-int yb = 30;
-int xc = 80;
-int yc = 30;
+int ax = 40;
+int ay = 1;
+int bx = 1;
+int by = 30;
+int cx = 80;
+int cy = 30;
 
-Console.SetCursorPosition(xa, ya);
+Console.SetCursorPosition(ax, ay);
 Console.WriteLine("+");
 
-Console.SetCursorPosition(xb, yb);
+Console.SetCursorPosition(bx, by);
 Console.WriteLine("+");
 
-Console.SetCursorPosition(xc, yc);
+Console.SetCursorPosition(cx, cy);
 Console.WriteLine("+"); 
 
-int x = xa;
-int y = xb;
+int x = ax;
+int y = bx;
 
 int count = 0;
 
@@ -28,18 +28,18 @@ while(count < 10000)
     int what = new Random().Next(0, 3); // [0,3) 0 1 2
     if(what == 0) 
     {
-        x = (x + xa)/2;
-        y = (y + ya)/2;
+        x = (x + ax)/2;
+        y = (y + ay)/2;
     }
     if (what == 1)
     {
-        x = (x + xb) / 2;
-        y = (y + yb) / 2;
+        x = (x + bx) / 2;
+        y = (y + by) / 2;
     }
     if(what == 2)
     {
-        x = (x + xc)/2;
-        y = (y + yc)/2;
+        x = (x + cx)/2;
+        y = (y + cy)/2;
     }
     Console.SetCursorPosition(x,y);
     Console.WriteLine("+");
